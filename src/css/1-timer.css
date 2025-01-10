@@ -1,0 +1,46 @@
+.timer{
+    display: flex;
+    width: 346px;
+     height: 72px;
+     gap: 24px;
+    margin-left: 156px;
+}
+
+.load{
+    display: flex;
+    gap: 8px;
+    margin-left: 156px;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    width: 355px;
+    height: 40px
+}
+.load-input{
+    width: 272px;
+    height: 40px;
+    line-height: inherit;
+
+}
+
+.load-btn{
+    display: inline-flex;
+    border-radius: 8px;
+        padding: 8px 16px;
+        width: 75px;
+        height: 40px;
+        background: #cfcfcf;
+        cursor: pointer;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #989898;
+}
+
+.load-btn:hover,
+.load-btn:focus{
+    background: #6c8cff;
+    color: #fff;
+}
