@@ -19,6 +19,7 @@
     width: 272px;
     height: 40px;
     line-height: inherit;
+ 
   
 
 }
@@ -44,4 +45,28 @@
 .load-btn:focus{
     background: #6c8cff;
     color: #fff;
+}
+
+.value{
+    font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+        display: block;
+        width: 55px;
+        height: 48px;
+        
+}
+
+.label{
+    font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+        height: 24px;
+        display: block;
+        text-transform: uppercase;
 }
