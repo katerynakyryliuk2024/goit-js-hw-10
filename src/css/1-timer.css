@@ -19,10 +19,13 @@
     width: 272px;
     height: 40px;
     line-height: inherit;
- 
-  
-
 }
+.load-input:hover,
+.load-input:focus{
+    border-radius: 4px;
+    border-color: #4E75FF;
+}
+
 
 .load-btn{
     display: inline-flex;
