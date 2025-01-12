@@ -61,12 +61,14 @@ startBtn.addEventListener('click', () => {
     elements.seconds.textContent = addLeadingZero (timeComponents.seconds);
    
   }, 1000);
+
+  function stopİnterval() {
+  clearInterval(intervalİD);
+}
   
 })
 
-function stopİnterval() {
-  clearInterval(intervalİD);
-}
+
 
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');

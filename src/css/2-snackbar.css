@@ -1,0 +1,76 @@
+.form{
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 156px;
+}
+
+.delay-label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 360px;
+    height: 72px;
+}
+.delay-input{
+    height: 40px;
+    width: 360px;
+    border-color: #808080;
+}
+
+.delay-input:hover{
+    border-color: #2E2F42;
+}
+
+.delay-input:focus{
+    border-color: #4E75FF;
+}
+
+.state{
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+}
+.radio-box{
+    margin: 24px 48px 8px;
+    width: 264px;
+    height: 32px;
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+}
+.radio-field{
+    margin-top: 30px;
+    margin-bottom: 24px;
+    width: 360px;
+    box-sizing: border-box;
+    border-radius: 4px;
+        stroke-width: 1px;
+        stroke: #808080;
+}
+
+.submit-btn{
+    display: inline-flex;
+    border-radius: 8px;
+        padding: 8px 99px;
+        width: 360px;
+        height: 40px;
+        background: #4e75ff;
+        font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #fff;
+            border: none;
+            text-align: center;
+}
+
+.submit-btn:hover{
+    background-color: #6C8CFF;
+}
