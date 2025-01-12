@@ -50,6 +50,11 @@ startBtn.addEventListener('click', () => {
     const diff = userSelectedDate - new Date();
     const timeComponents = convertMs(diff)
 
+    if (diff <= 0) {
+      stopİnterval();
+      return;
+    }
+
     elements.days.textContent = addLeadingZero(timeComponents.days);
     elements.hours.textContent = addLeadingZero (timeComponents.hours);
     elements.minutes.textContent = addLeadingZero (timeComponents.minutes);
@@ -58,6 +63,10 @@ startBtn.addEventListener('click', () => {
   }, 1000);
   
 })
+
+function stopİnterval() {
+  clearInterval(intervalİD);
+}
 
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
