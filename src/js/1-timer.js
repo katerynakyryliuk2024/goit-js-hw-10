@@ -34,14 +34,35 @@ const options = {
 
 const fp = flatpickr(myInput, options);
 
+const elements = {
+  days: document.querySelector('[data-days]'),
+  hours: document.querySelector('[data-hours]'),
+  minutes: document.querySelector('[data-minutes]'),
+  seconds: document.querySelector('[data-seconds]'),
+}
+
+console.log(elements);
+
 startBtn.addEventListener('click', () => { 
   startBtn.disabled = true;
   myInput.setAttribute('disabled', 'disabled');
-  const intervalİD = setInterval(() => { const diff = userSelectedDate - new Date();
-    console.log(convertMs(diff));
+  const intervalİD = setInterval(() => {
+    const diff = userSelectedDate - new Date();
+    const timeComponents = convertMs(diff)
+
+    elements.days.textContent = addLeadingZero(timeComponents.days);
+    elements.hours.textContent = addLeadingZero (timeComponents.hours);
+    elements.minutes.textContent = addLeadingZero (timeComponents.minutes);
+    elements.seconds.textContent = addLeadingZero (timeComponents.seconds);
+   
   }, 1000);
   
 })
+
+function addLeadingZero(value) {
+  return String(value).padStart(2, '0');
+}
+ 
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
