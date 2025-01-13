@@ -13,23 +13,24 @@ const delayFormSubmit = event => {
     
     console.dir(event.target[2].checked);
 
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
            
-                if( event.target[2].checked)  {
-                   iziToast.success({
-    message: `❌ Rejected promise in ${inputValue}ms`,
-}); 
-                } else {
-                    iziToast.error({
-    title: 'Error',
-    message: `✅ Fulfilled promise in ${inputValue}ms`,
-});
+            if (event.target[2].checked) {
+                resolve(iziToast.success({
+                    message: `❌ Rejected promise in ${inputValue}ms`,
+                }) );
+    } else {
+        reject(iziToast.error({
+            title: 'Error',
+            message: `✅ Fulfilled promise in ${inputValue}ms`,
+        }));  
                 }
       }, inputValue);
   });
 
 
 }
+
 
 formEl.addEventListener('submit', delayFormSubmit);
