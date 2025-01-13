@@ -3,16 +3,33 @@ import "izitoast/dist/css/iziToast.min.css";
 
 const delayİnput = document.querySelector('.delay-input');
 console.dir(delayİnput);
-delayİnput.addEventListener('input', () => {
-    const inputValue = delayİnput.value.trim();
+const formEl = document.querySelector('.form');
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            reject(`❌ Rejected promise in ${inputValue}ms`);
-            resolve(`✅ Fulfilled promise in ${inputValue}ms`);
-        }, inputValue);
-    })
-    Promise.resolve();
-        .then(value => console.log(value));
+const delayFormSubmit = event => {
+    event.preventDefault();
 
-})
+    const inputValue = event.target[0].value;
+    console.dir(inputValue);
+    
+    console.dir(event.target[2].checked);
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+           
+                if( event.target[2].checked)  {
+                   iziToast.success({
+    message: `❌ Rejected promise in ${inputValue}ms`,
+}); 
+                } else {
+                    iziToast.error({
+    title: 'Error',
+    message: `✅ Fulfilled promise in ${inputValue}ms`,
+});
+                }
+      }, inputValue);
+  });
+
+
+}
+
+formEl.addEventListener('submit', delayFormSubmit);
