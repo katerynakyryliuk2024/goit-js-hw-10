@@ -6,7 +6,7 @@ console.dir(delayİnput);
 const formEl = document.querySelector('.form');
 console.dir(formEl);
 
-const delayFormSubmit = event => {
+formEl.addEventListener('submit', event => {
     event.preventDefault();
 
     const inputValue = event.target[0].value;
@@ -14,19 +14,19 @@ const delayFormSubmit = event => {
     
     console.dir(event.target[2].checked);
 
-    return new Promise((resolve, reject) => {
+   new Promise((resolve, reject) => {
         setTimeout(() => {
            
             if (event.target[2].checked) {
               return resolve();
     } else {
-       reject(error);  
+       reject();  
                 }
         }, inputValue);
         
-  });
+  })
    
-    .then(responce => {
+.then(responce => {
    return iziToast.success({
         title: 'Ok',
         message: `❌ Rejected promise in ${inputValue}ms`,
@@ -39,9 +39,9 @@ const delayFormSubmit = event => {
     });
 });
 
-};
+});
 
 
 
 
-formEl.addEventListener('submit', delayFormSubmit);
+//formEl.addEventListener('submit', delayFormSubmit);
