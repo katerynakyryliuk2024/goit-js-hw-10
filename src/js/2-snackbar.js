@@ -20,14 +20,14 @@ const delayFormSubmit = event => {
             if (event.target[2].checked) {
               return resolve();
     } else {
-       return reject(error);  
+       reject(error);  
                 }
         }, inputValue);
         
   });
    
     .then(responce => {
-    iziToast.success({
+   return iziToast.success({
         title: 'Ok',
         message: `❌ Rejected promise in ${inputValue}ms`,
     });
