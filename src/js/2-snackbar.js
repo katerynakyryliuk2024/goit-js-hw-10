@@ -42,6 +42,3 @@ formEl.addEventListener('submit', event => {
 });
 
 
-
-
-//formEl.addEventListener('submit', delayFormSubmit);
