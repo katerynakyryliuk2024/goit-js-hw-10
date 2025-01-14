@@ -25,11 +25,8 @@ const delayFormSubmit = event => {
         }, inputValue);
         
   });
-    
-
-};
-
-delayFormSubmit().then(responce => {
+   
+    .then(responce => {
     iziToast.success({
         title: 'Ok',
         message: `❌ Rejected promise in ${inputValue}ms`,
@@ -41,6 +38,10 @@ delayFormSubmit().then(responce => {
         message: `✅ Fulfilled promise in ${inputValue}ms`,
     });
 });
+
+};
+
+
 
 
 formEl.addEventListener('submit', delayFormSubmit);
