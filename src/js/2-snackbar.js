@@ -29,13 +29,13 @@ formEl.addEventListener('submit', event => {
 .then(responce => {
    return iziToast.success({
         title: 'Ok',
-        message: `❌ Rejected promise in ${inputValue}ms`,
+        message: `✅ Fulfilled promise in ${inputValue}ms`,
     });
 })
     .catch (error => {
     return iziToast.error({
         title: 'Error',
-        message: `✅ Fulfilled promise in ${inputValue}ms`,
+        message: `❌ Rejected promise in ${inputValue}ms`,
     });
 });
 
