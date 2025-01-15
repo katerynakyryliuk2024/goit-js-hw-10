@@ -12,7 +12,7 @@ formEl.addEventListener('submit', event => {
     const inputValue = event.target[0].value;
     console.dir(inputValue);
     
-    console.dir(event.target[2]);
+    console.dir(event.target[2].checked);
 
    new Promise((resolve, reject) => {
         setTimeout(() => {
